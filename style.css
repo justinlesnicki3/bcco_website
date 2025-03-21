@@ -1,10 +1,27 @@
 body {
     background-color: rgb(163, 210, 242);
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
     color: darkblue;
     text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, nav {
+    margin: 0;
+    padding: 0;
+}
+
+section, div {
+    margin-bottom: 0;
 }
 
 .bcco_black {
@@ -43,8 +60,9 @@ display: block;
 }
 
 nav {
-    background-color: rgb(153, 153, 153);
+    background: #333;
     padding: 10px 0;
+    
 }
 
 nav ul {
@@ -75,14 +93,12 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* General navbar styles */
-
-/* General dropdown styles */
 .nav-bar {
     list-style: none;
     padding: 0;
     margin: 0;
     background: #333;
+
 }
 
 .nav-bar li {
@@ -144,5 +160,43 @@ nav ul li a:hover {
 /* Show side dropdown on hover */
 .dropdown-menu li:hover > .sub-menu {
     display: block;
+}
+
+div img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contact_us_banner {
+    margin-top: -240px; /* Adjust value as needed */
+}
+
+.contact_us_banner img {
+    width: 100%; /* Ensure image fits container */
+    height: auto;
+    display: block;
+}
+
+.banner-button {
+    position: absolute;
+    top: 50%;  /* Moves button to the center vertically */
+    left: 50%; /* Moves button to the center horizontally */
+    transform: translate(-50%, 250%); /* Centers exactly */
+    background-color: #007bff91;
+    color: white;
+    border: none;
+    padding: 20px 35px;
+    font-size: 26px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.banner-button:hover {
+    background-color: #0056b3;
 }
 
