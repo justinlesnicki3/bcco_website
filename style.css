@@ -1,7 +1,19 @@
 body {
-    background-color: rgb(163, 210, 242);
+    background-color: rgb(211, 222, 242);
     margin: 0;
     padding: 0;
+}
+
+.bcco_black {
+    background: transparent;
+    width: 258px;
+    height: 258px;
+    margin: auto;
+    display: block;
+    border: none;
+    display: inline-block; /* Or block if you want it to take full width */
+    padding: 0;  /* Remove any padding around the logo */
+    margin: 0; 
 }
 
 h1 {
@@ -198,5 +210,41 @@ div img {
 
 .banner-button:hover {
     background-color: #0056b3;
+}
+
+.about {
+    background: rgba(104, 123, 190, 0.51);
+    height: 915px;
+    padding-top: 15vh;
+}
+
+.title {
+    color: black;
+    font-size: 96px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    padding-left: 13%;
+}
+
+.description-background {
+    height: 290px;
+    width: 650px;
+    flex-shrink: 0;
+    border-radius: 35px;
+    border-radius: 35px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
+    margin-left: 9%;
+}
+
+.description {
+    color: #000;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 24px;
+    line-height: normal;
+    padding-top: 5%;
+    font-weight: 500;
+
 }
 
