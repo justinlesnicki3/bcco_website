@@ -257,11 +257,16 @@ div img {
 }
 
 .contact_us {
-    background: rgba(104, 123, 190, 0.51);
-    height: 915px;
+    background: rgba(136, 159, 244, 0.51);
+    height: 1915px;
     padding-top: 15vh;
+    background-image: url(contact_our_specialist.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; /* Ensures the image fits without cropping */
+    justify-content: center;
+    align-items: center;
 }
-
 
 .family_background {
     opacity: 50%;
@@ -269,21 +274,26 @@ div img {
 
 .contact_us_form form {
     display: flex;
-    justify-content: center; /* Keeps them centered */
-    gap: 0; /* Removes any extra gap */
+    justify-content: center; 
+    gap: 0; 
+}
+
+.contact_us_form {
+    padding-top: 9%;
 }
 
 .left_stack, .right_stack {
     display: flex;
     flex-direction: column;
     flex: 1;
-    max-width: 20%; /* Reduce width slightly to bring them closer */
+    max-width: 20%; 
+    padding-top: 30%;
 }
 
 .left_stack {
-    margin-right: -10px; /* Move left stack slightly right */
+    margin-right: -10px; 
 }
 
 .right_stack {
-    margin-left: -10px; /* Move right stack slightly left */
+    margin-left: -10px; 
 }
