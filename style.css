@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(211, 222, 242);
+    background-color: rgb(207, 225, 255);
     margin: 0;
     padding: 0;
 }
@@ -245,6 +245,45 @@ div img {
     line-height: normal;
     padding-top: 5%;
     font-weight: 500;
-
+    font-style: italic;
 }
 
+.more_pictures {
+    width: 700px;
+    height: auto;
+    margin-left: 52%;
+    margin-top: -20%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
+}
+
+.contact_us {
+    background: rgba(104, 123, 190, 0.51);
+    height: 915px;
+    padding-top: 15vh;
+}
+
+
+.family_background {
+    opacity: 50%;
+}
+
+.contact_us_form form {
+    display: flex;
+    justify-content: center; /* Keeps them centered */
+    gap: 0; /* Removes any extra gap */
+}
+
+.left_stack, .right_stack {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 20%; /* Reduce width slightly to bring them closer */
+}
+
+.left_stack {
+    margin-right: -10px; /* Move left stack slightly right */
+}
+
+.right_stack {
+    margin-left: -10px; /* Move right stack slightly left */
+}
