@@ -194,7 +194,7 @@ div img {
     position: absolute;
     top: 50%;  /* Moves button to the center vertically */
     left: 50%; /* Moves button to the center horizontally */
-    transform: translate(-50%, 250%); /* Centers exactly */
+    transform: translate( 150%, 250%); /* Centers exactly */
     background-color: #007bff91;
     color: white;
     border: none;
@@ -205,6 +205,7 @@ div img {
     font-weight: 700;
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
+    max-width: 250px;
 
 }
 
@@ -275,25 +276,67 @@ div img {
 .contact_us_form form {
     display: flex;
     justify-content: center; 
-    gap: 0; 
+    gap: 10px; 
+    flex-wrap: wrap;
 }
 
 .contact_us_form {
-    padding-top: 9%;
+    padding-top: 10%;
 }
 
 .left_stack, .right_stack {
     display: flex;
     flex-direction: column;
     flex: 1;
-    max-width: 20%; 
+    max-width: 10%; 
     padding-top: 30%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    gap: 15px;
+    
 }
 
-.left_stack {
-    margin-right: -10px; 
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Rounds corners */
+    font-size: 16px;
+    background: white;
+    transition: border 0.3s ease;
 }
 
-.right_stack {
-    margin-left: -10px; 
+/* Add focus effect */
+input:focus, select:focus {
+    border-color: #2A6BFF;
+    outline: none;
+}
+
+
+button:hover {
+    background-color: #1E50CC; 
+}
+
+.name, .phone, .email {
+    padding-left: 15%;
+    font-size: larger;
+}
+
+.new_customer, .service, .referral {
+    padding-left: 15%;
+    font-size: larger;
+}
+
+button {
+    border-radius: 35px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #2A6BFF;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: 50%; /* Adjust width as needed */
+    text-align: center;
+    margin-left: -25%;
 }

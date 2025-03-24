@@ -50,6 +50,7 @@
                 </ul></li>
                 <li><a href="contact.html">Cabinetry</a></li>
                 <li><a href="contact.html">Reviews</a></li>
+                <li><a href="contact.html">About</a></li>
                 <li><a href="contact.html">Area Map</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -78,40 +79,32 @@
 
     <div class="contact_us">
         <div class="contact_us_form">
-
             <form action="submit_form.php" method="POST">
                 <div class="left_stack">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" required>
-        
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required>
-        
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
                 </div>
-    
+        
                 <div class="right_stack">
-                    <label for="new_customer">Are you a new customer?</label>
                     <select id="new_customer" name="new_customer">
+                        <option value="" disabled selected>Are you a new customer?</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
-                     </select>
+                    </select>
         
-                    <label for="service">Service Interested In:</label>
                     <select id="service" name="service">
+                        <option value="" disabled selected>Service Interested In</option>
                         <option value="heating">Heating</option>
                         <option value="cooling">Cooling</option>
                         <option value="glass">Glass</option>
                         <option value="cabinetry">Cabinetry</option>
                     </select>
         
-                    <label for="referral">How did you hear about us?</label>
-                    <input type="text" id="referral" name="referral">
-    
-                    <button type="submit">Submit</button>
+                    <input type="text" id="referral" name="referral" placeholder="How did you hear about us?">
+        
+                    <button type="submit" class="button">Submit</button>
                 </div>
-
             </form>
         </div>
     </div>
