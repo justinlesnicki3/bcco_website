@@ -379,6 +379,20 @@ button {
     display: flex;
     width: 500px;
     height: auto;
-    align-items: center;
     justify-content: center;
+    gap: 10px;
+}
+
+.bottom_socials a {
+    display: inline-block;
+}
+
+.facebook_bottom, .yelp_bottom {
+    width: 200px;
+    height: auto;
+}
+
+a:hover .facebook_bottom, a:hover .yelp_bottom {
+    transform: scale(1.1);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
