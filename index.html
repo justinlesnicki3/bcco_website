@@ -5,57 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to BCCO!</title>
     <link rel="stylesheet" href="style.css">
-    <div class="horizontal-container">
-    <p class="Mowimy">Mówimy Po Polsku</p>
-    <div class="logo-container">
-        <a href="index.html">
-            <img src="bcco black text copy.png" alt="BCCO_Logo_Black_Text" class="bcco_black">
-        </a>
-    </div>
-    <div class="text-group">
-        <h1 class="Available">Available Monday - Friday</h1>
-        <h2>5 pm - 11 pm</h2>
-    </div>
-    </div>
 </head>
 <body>
+    <div class="horizontal-container">
+        <p class="Mowimy">Mówimy Po Polsku</p>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="bcco black text copy.png" alt="BCCO_Logo_Black_Text" class="bcco_black">
+            </a>
+        </div>
+        <div class="text-group">
+            <h1 class="Available">Available Monday - Friday</h1>
+            <h2>5 pm - 11 pm</h2>
+        </div>
+    </div>
+
     <header>
         <nav>
             <ul class="nav-bar">
-                <li class="dropdown"><a href="heatingservices.html" class="dropdown-toggle">Heating ▼</a>
-                <ul class="dropdown-menu">
-                    <li><a href="heatingservices.html">Heating Repair</a></li>
-                    <li><a href="heatingservices.html">Heating Installation</a></li>
-                    <li><a href="heatingservices.html">Heating Maintenance</a></li>
-                </ul>
-            </li>
-                <li class="dropdown"><a href="about.html" class="dropdown-toggle">Cooling ▼</a>
+                <li class="dropdown">
+                    <a href="heatingservices.html" class="dropdown-toggle">Heating ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="heatingservices.html">Heating Repair</a></li>
+                        <li><a href="heatingservices.html">Heating Installation</a></li>
+                        <li><a href="heatingservices.html">Heating Maintenance</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="about.html" class="dropdown-toggle">Cooling ▼</a>
                     <ul class="dropdown-menu">
                         <li><a href="#">AC Repair</a></li>
                         <li><a href="#">AC Installation</a></li>
                         <li><a href="#">AC Maintenance</a></li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle">Indoor Air Quality ➤ </a>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Indoor Air Quality ➤</a>
                             <ul class="dropdown-menu sub-menu">
                                 <li><a href="#">Air Purifiers</a></li>
                                 <li><a href="#">Humidifiers</a></li>
                                 <li><a href="#">Dehumidifiers</a></li>
-                        </ul></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="services.html" class="dropdown-toggle">Glass ▼</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Shower Doors</a></li>
-                    <li><a href="#">Railings</a></li>
-                    <li><a href="#">Frameless Showers</a></li>
-                    <li><a href="#">Sliding Showers</a></li>
-                    </li>
-                </ul></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropdown-toggle">Glass ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Shower Doors</a></li>
+                        <li><a href="#">Railings</a></li>
+                        <li><a href="#">Frameless Showers</a></li>
+                        <li><a href="#">Sliding Showers</a></li>
+                    </ul>
+                </li>
                 <li><a href="contact.html">Cabinetry</a></li>
                 <li><a href="contact.html">Reviews</a></li>
                 <li><a href="contact.html">About</a></li>
                 <li><a href="contact.html">Area Map</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
 
@@ -65,7 +76,6 @@
     </div>
 
     <div class="about">
-
         <h1 class="title">Who We Are</h1>
         <div class="description-background">
             <p class="description">BCCO is a trusted construction company serving the Chicagoland area, specializing in HVAC, glass installations, and cabinetry. We provide high-quality craftsmanship and reliable solutions for residential and commercial projects. Whether you need efficient heating and cooling, sleek glass installations, or custom cabinetry, our skilled team delivers precision and excellence in every job.</p>
@@ -74,7 +84,6 @@
         <div class="more_pictures">
             <img src="about_pictures.png" alt="about_pictures">
         </div>
-
     </div>
 
     
@@ -133,5 +142,30 @@
     
 
     <script src="script.js"></script>
+
+    <script>
+        // Toggle the navigation menu when the hamburger menu is clicked
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navBar = document.querySelector('.nav-bar');
+        
+        hamburgerMenu.addEventListener('click', () => {
+            navBar.classList.toggle('active');
+        });
+    
+        // Toggle the dropdown menu when clicked (for mobile)
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent the default link behavior
+                const dropdownMenu = toggle.nextElementSibling; // The associated dropdown menu
+                
+                if (dropdownMenu) {
+                    dropdownMenu.classList.toggle('active');
+                }
+            });
+        });
+    </script>
+    
 </body>
 </html>
