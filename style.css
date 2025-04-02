@@ -126,10 +126,11 @@ nav ul {
     display: flex; 
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
+    display: relative;
 }
 
 nav ul li a {
@@ -207,12 +208,10 @@ nav ul li a:hover {
 
 /* ---- Side Dropdown (For Indoor Air Quality) ---- */
 .sub-menu {
-    top: 0;
-    left: 100%; /* Moves the submenu to the right */
-    position: absolute;
     display: none;
-    background: #555;
-    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 100%
 }
 
 /* Show side dropdown on hover */
