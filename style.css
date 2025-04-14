@@ -115,123 +115,80 @@ display: block;
     }
 }
 
-nav {
-    background: #333;    
-}
-
-nav ul {
+li {
     list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex; 
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
-nav ul li {
-    display: relative;
-}
-
-nav ul li a {
+a {
     text-decoration: none;
-    color: white;
-    font-family: sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    padding: 10px 15px;
-    transition: background 0.3s ease-in-out;
+    color:black;
+    font-size: 1rem;
 }
 
-nav ul li a:hover {
-    background: #555; 
-    border-radius: 5px;
+a:hover{
+    color: orange;
 }
 
-.nav-bar {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-}
-
-.nav-bar li {
+header {
     position: relative;
-    display: inline-block;
+    padding: 0 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
 }
 
-.nav-bar a {
-    display: block;
-    padding: 15px;
-    color: white;
-    text-decoration: none;
-}
-
-/* Dropdown menu initially hidden */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #444;
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-    width: 250px;
-    z-index: 1000; /* Ensures it stays above other elements */
-}
-
-/* Show dropdown menu on hover */
-.dropdown:hover > .dropdown-menu {
-    display: block;
-}
-
-/* Style dropdown items */
-.dropdown-menu li {
+.navbar {
     width: 100%;
-    padding: 10px;
-}
-
-.dropdown-menu a {
-    padding: 10px;
-    display: block;
-    color: white;
-}
-
-.dropdown-menu a:hover {
-    background: #555;
-}
-
-/* ---- Side Dropdown (For Indoor Air Quality) ---- */
-.sub-menu {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 100%
-}
-
-/* Show side dropdown on hover */
-.dropdown-menu li:hover > .sub-menu {
-    display: block;
-}
-
-.hamburger-menu {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    width: 30px;
-    height: 25px;
+    gap: 20px;
+    margin-left: 80vh;
+    z-index: 9999;  
+    position: relative;
+    
 }
 
-.hamburger-menu .bar {
-    height: 5px;
-    width: 100%;
-    background-color: white;
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: #FFF;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.action_btn {
+    background-color: orange;
+    color: #FFF;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.5 ease;
+    text-align: center;
+}
+
+.action_btn:hover{
+    scale: 1.05;
+    color: #FFF;
+}
+
+.action_btn:active{
+    scale: 0.95;
 }
 
 div img {
