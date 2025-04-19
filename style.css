@@ -559,3 +559,38 @@ a:hover .facebook_bottom, a:hover .yelp_bottom {
     transform: scale(1.1);
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
+
+@media (max-width: 768px) {
+    .bottom {
+      height: auto;
+      padding: 2rem 1rem;
+    }
+  
+    .bcco_bottom {
+      width: 90%;
+    }
+  
+    .reach_out {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+  
+    .p_tags {
+      font-size: 1.25rem;
+      text-align: center;
+    }
+  
+    .bottom_socials {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+      
+    }
+  
+    .facebook_bottom, .yelp_bottom {
+      width: 70%;
+      margin-left: 5vh;
+    }
+  }
