@@ -10,7 +10,7 @@
 
     <div class="horizontal-container">
         <p class="Mowimy">Mówimy Po Polsku</p>
-        <div class="logo-container">
+        <div class="logo_container">
             <a href="index.html">
                 <img src="bcco black text copy.png" alt="BCCO_Logo_Black_Text" class="bcco_black">
             </a>
@@ -22,15 +22,18 @@
     </div>
 
     <div class="navbar">
-        <ul class="links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
         <div class="toggle_btn">
             <i class="fa-solid fa-bars"></i>
         </div>
+        <ul class="links">
+            <li><a href="#home">Heating</a></li>
+            <li><a href="#home">Air Conditioning</a></li>
+            <li><a href="#home">Glass</a></li>
+            <li><a href="#home">Cabinetry</a></li>
+            <li><a href="#about">Reviews</a></li>
+            <li><a href="#services">Area Map</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </div>
 
     <div class="contact_us_banner">
@@ -39,14 +42,17 @@
     </div>
 
     <div class="about">
-        <h1 class="title">Who We Are</h1>
         <div class="about-content">
+
+            <div class="left-about">
+                <h1 class="title">Who We Are</h1>
             <div class="description-background">
                 <p class="description">
                     BCCO is a trusted construction company serving the Chicagoland area, specializing in HVAC, glass installations, and cabinetry. We provide high-quality craftsmanship and reliable solutions for residential and commercial projects. Whether you need efficient heating and cooling, sleek glass installations, or custom cabinetry, our skilled team delivers precision and excellence in every job.
                 </p>
             </div>
-    
+            </div>
+            
             <div class="more_pictures">
                 <img src="about_pictures.png" alt="about_pictures">
             </div>
@@ -59,31 +65,33 @@
         <div class="contact_us_form">
             <form action="submit_form.php" method="POST">
                 <div class="left_stack">
-                    <input type="text" id="name" name="name" placeholder="Full Name" required>
-                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
-                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                  <input type="text" name="name" placeholder="Full Name" required>
+                  <input type="tel" name="phone" placeholder="Phone Number" required>
+                  <input type="email" name="email" placeholder="Email Address" required>
                 </div>
-        
+              
                 <div class="right_stack">
-                    <select id="new_customer" name="new_customer">
-                        <option value="" disabled selected>Are you a new customer?</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-        
-                    <select id="service" name="service">
-                        <option value="" disabled selected>Service Interested In</option>
-                        <option value="heating">Heating</option>
-                        <option value="cooling">Cooling</option>
-                        <option value="glass">Glass</option>
-                        <option value="cabinetry">Cabinetry</option>
-                    </select>
-        
-                    <input type="text" id="referral" name="referral" placeholder="How did you hear about us?">
-        
-                    <button type="submit" class="button">Submit</button>
+                  <select name="new_customer" required>
+                    <option value="" disabled selected>Are you a new customer?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+              
+                  <select name="service" required>
+                    <option value="" disabled selected>Service Interested In</option>
+                    <option value="heating">Heating</option>
+                    <option value="cooling">Cooling</option>
+                    <option value="glass">Glass</option>
+                    <option value="cabinetry">Cabinetry</option>
+                  </select>
+              
+                  <input type="text" name="referral" placeholder="How did you hear about us?">
+                  
                 </div>
-            </form>
+
+                <button type="submit" class="button">Submit</button>
+
+              </form>
         </div>
     </div>
 

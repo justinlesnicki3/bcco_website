@@ -25,3 +25,10 @@ document.getElementById('hamburger-menu').addEventListener('click', function() {
     const navBar = document.querySelector('.nav-bar');
     navBar.classList.toggle('active');  // Toggle the 'active' class to show/hide the menu
 });
+
+const toggleBtn = document.querySelector('.toggle_btn');
+    const navLinks = document.querySelector('.links');
+
+    toggleBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
