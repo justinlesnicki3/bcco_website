@@ -273,23 +273,22 @@ div img {
 
 .banner-button {
     position: absolute;
-    top: 50%;  /* Moves button to the center vertically */
-    left: 50%; /* Moves button to the center horizontally */
-    transform: translate( -50%, -50%); /* Centers exactly */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #007bff91;
     color: white;
     border: none;
-    font-size: clamp(16px, 2.5vw, 26px);;
+    font-size: clamp(16px, 2.5vw, 26px);
+    padding: clamp(10px, 2vw, 18px) clamp(20px, 4vw, 40px);
     cursor: pointer;
     border-radius: 50px;
     font-weight: 700;
     transition: all 0.3s ease-in-out;
     text-align: center;
-    max-width: 80%;
-    width: 350px;
-    line-height: 1;
     white-space: nowrap;
     z-index: 9999;
+    width: clamp(180px, 40vw, 350px);
 }
 
 .banner-button:hover {
@@ -400,7 +399,6 @@ div img {
 
 .contact_us {
     background: rgba(136, 159, 244, 0.51);
-    min-height: 100vh;
     background-image: url(contact_our_specialist.png);
     background-position: center;
     background-repeat: no-repeat;
