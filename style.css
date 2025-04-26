@@ -52,6 +52,8 @@ width: 258px;
 height: 258px;
 margin: auto;
 display: block;
+mix-blend-mode: multiply;
+
 }
 
 .horizontal-container {
@@ -513,6 +515,7 @@ button {
 
     width: 500px;
     height: auto;
+    mix-blend-mode: multiply;
 }
 
 .reach_out {
@@ -592,3 +595,42 @@ a:hover .facebook_bottom, a:hover .yelp_bottom {
       margin-left: 5vh;
     }
   }
+
+  .family_friendly {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* maintains aspect ratio & fills container */
+    display: block;
+}
+
+.image-with-text {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+}
+
+/* Overlay text styling */
+.image-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* center vertically and horizontally */
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 5vw, 3rem); /* Increased min and max */
+    user-select: none;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Media query for tablets and phones */
+@media (max-width: 480px) {
+    .image-label {
+        font-size: clamp(1rem, 6vw, 2rem); /* Also increased here */
+        padding: 0.2rem 0.4rem;
+    }
+}
+

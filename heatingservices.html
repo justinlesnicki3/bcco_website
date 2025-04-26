@@ -5,57 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to BCCO!</title>
     <link rel="stylesheet" href="style.css">
-    <div class="horizontal-container">
-    <p class="Mowimy">Mówimy Po Polsku</p>
-    <div class="logo-container">
-        <a href="index.html">
-            <img src="bcco black text copy.png" alt="BCCO_Logo_Black_Text" class="bcco_black">
-        </a>
-    </div>
-    <div class="text-group">
-        <h1 class="Available">Available Monday - Friday</h1>
-        <h2>5 pm - 11 pm</h2>
-    </div>
-    </div>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="nav-bar">
-                <li class="dropdown"><a href="index.html" class="dropdown-toggle">Heating ▼</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Heating Repair</a></li>
-                    <li><a href="#">Heating Installation</a></li>
-                    <li><a href="#">Heating Maintenance</a></li>
-                </ul>
-            </li>
-                <li class="dropdown"><a href="about.html" class="dropdown-toggle">Cooling ▼</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">AC Repair</a></li>
-                        <li><a href="#">AC Installation</a></li>
-                        <li><a href="#">AC Maintenance</a></li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle">Indoor Air Quality ➤ </a>
-                            <ul class="dropdown-menu sub-menu">
-                                <li><a href="#">Air Purifiers</a></li>
-                                <li><a href="#">Humidifiers</a></li>
-                                <li><a href="#">Dehumidifiers</a></li>
-                        </ul></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a href="services.html" class="dropdown-toggle">Glass ▼</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Shower Doors</a></li>
-                    <li><a href="#">Railings</a></li>
-                    <li><a href="#">Frameless Showers</a></li>
-                    <li><a href="#">Sliding Showers</a></li>
-                    </li>
-                </ul></li>
-                <li><a href="contact.html">Cabinetry</a></li>
-                <li><a href="contact.html">Reviews</a></li>
-                <li><a href="contact.html">About</a></li>
-                <li><a href="contact.html">Area Map</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <div class="horizontal-container">
+        <p class="Mowimy">Mówimy Po Polsku</p>
+        <div class="logo_container">
+            <a href="index.html">
+                <img src="bcco_black.png" alt="BCCO_Logo_Black_Text" class="bcco_black">
+            </a>
+        </div>
+        <div class="text-group">
+            <h1 class="Available">Available Monday - Friday</h1>
+            <h2>5 pm - 11 pm</h2>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="links">
+            <li><a href="#home">Heating</a></li>
+            <li><a href="#home">Air Conditioning</a></li>
+            <li><a href="#home">Glass</a></li>
+            <li><a href="#home">Cabinetry</a></li>
+            <li><a href="#about">Reviews</a></li>
+            <li><a href="#services">Area Map</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    
+
+    <div>
+        <div class="image-with-text">
+            <img src="family_friendly.png" alt="family_friendly" class="family_friendly">
+            <p class="image-label">HEATING SERVICES</p>
+        </div> 
+    </div>
+
+    
+
+    <div class="contact_us">
+        <div class="contact_us_form">
+            <form action="submit_form.php" method="POST">
+                <div class="left_stack">
+                  <input type="text" name="name" placeholder="Full Name" required>
+                  <input type="tel" name="phone" placeholder="Phone Number" required>
+                  <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+              
+                <div class="right_stack">
+                  <select name="new_customer" required>
+                    <option value="" disabled selected>Are you a new customer?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+              
+                  <select name="service" required>
+                    <option value="" disabled selected>Service Interested In</option>
+                    <option value="heating">Heating</option>
+                    <option value="cooling">Cooling</option>
+                    <option value="glass">Glass</option>
+                    <option value="cabinetry">Cabinetry</option>
+                  </select>
+              
+                  <input type="text" name="referral" placeholder="How did you hear about us?">
+                  
+                </div>
+
+                <button type="submit" class="button">Submit</button>
+
+              </form>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <img src="bcco_black.png" alt="bcco_bottom" class="bcco_bottom">
+        <h1 class="reach_out">Reach Out To Us, Anytime!</h1>
+
+        <div class="p_tags">
+        <p class="phone_number">773-555-5555</p>
+        <p class="email">sales@teambcco.com</p>
+        </div>
+
+        <div class="bottom_socials">
+            <a href="https://www.facebook.com/profile.php?id=61572086432628" target="_blank">
+                <img src="facebook.png" alt="facebook" class="facebook_bottom">
+            </a>
+            <a href="https://www.yelp.ca/biz/bcco-lemont-2?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank">
+                <img src="yelp.png" alt="yelp" class="yelp_bottom">
+            </a>
+        </div>
+        
+    </div>
+    
+
+    <script src="script.js"></script>
+    
 </body>
+</html>
