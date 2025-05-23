@@ -145,10 +145,8 @@ nav {
 }
 
 .hero-section {
-    height: 600px;
     padding: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin: 0 40px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -157,13 +155,13 @@ nav {
 }
 
 .hero-section img {
-    width: 60%;
-    height: 750px;
+    width: 40%;
+    height: auto;
     mix-blend-mode: multiply;
 }
 
 .hero-text {
-    width: 80%;
+    width: 60%;
 }
 
 .hero-text h1 {
@@ -178,48 +176,48 @@ nav {
 }
 
 .button-hero {
-    padding: 1em 2.1em 1.1em;
-    border-radius: 4px;
-    margin: 8px;
+    padding: 0.75em 2.5em;
     border: none;
-    background-color: #6163e6;
-    color: #000;
-    font-weight: 800;
-    font-size: 0.85em;
+    border-radius: 999px; 
+    background-color: #3a66e5; 
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
     text-transform: uppercase;
-    text-align: center;
-    box-shadow: 0em -0.2rem 0em #000000 inset;
-    transition: color 3s ease-in-out;
-}
-
-.button-hero:hover{
-    background-color: transparent;
-    color: #8b4513;
-    border: 3px solid #2315a0;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width:848px) {
-    .hero-section{
-        margin-top: 10px;
+.button-hero:hover {
+    background-color: #2f52cc; 
+    transform: translateY(-2px); 
+}
+
+@media (max-width: 848px) {
+    .hero-section {
         flex-direction: column;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
     }
-    .hero-text{
+
+    .hero-section img {
+        width: 80%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .hero-text {
         width: 100%;
         text-align: center;
     }
-    .hero-text h1{
-        font-size: 3rem;
+
+    .hero-text h1 {
+        font-size: 2rem;
     }
 }
-
-
-div img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 .about {
     background: rgba(104, 123, 190, 0.51);
     padding: 15vh 5%;
