@@ -814,3 +814,123 @@ button {
     text-align: center;
     z-index: 1;
 }
+
+/*this is for the reviews page */
+
+.section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+
+    .platforms {
+    background-color: #1d4ed8;
+    padding: 1rem;
+    border-radius: 35px;
+    text-align: center;
+    color: white;
+    margin: 2rem auto; /* centers horizontally */
+    width: 100%;
+    max-width: 1200px; /* responsive max size */
+    box-sizing: border-box;
+    height: 35vh;
+}
+
+    .platforms h3 {
+      margin-bottom: 1rem;
+    }
+
+    .platform-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+    .platform-icons img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+
+    .testimonial-box {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .stars {
+      color: #fbbf24;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonial-text {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .author {
+      font-weight: bold;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .form-box {
+      background-color: #1d4ed8;
+      border-radius: 15px;
+      padding: 2rem 1rem;
+      color: white;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .form-box h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-box form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .form-box input,
+    .form-box select {
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+      width: 100%;
+    }
+
+    .form-box button {
+      background-color: white;
+      color: #1d4ed8;
+      border: none;
+      border-radius: 5px;
+      padding: 0.7rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @media (min-width: 600px) {
+      .form-box form {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .form-box form > input:last-of-type,
+      .form-box form > button {
+        grid-column: span 2;
+      }
+    }
