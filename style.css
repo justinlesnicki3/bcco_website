@@ -830,38 +830,99 @@ button {
       margin-bottom: 1.5rem;
     }
 
-    .platforms {
-    background-color: #1d4ed8;
-    padding: 1rem;
-    border-radius: 35px;
-    text-align: center;
-    color: white;
-    margin: 2rem auto; /* centers horizontally */
-    width: 100%;
-    max-width: 1200px; /* responsive max size */
-    box-sizing: border-box;
-    height: 35vh;
+.platforms {
+  background-color: #1d4ed8;
+  padding: 1rem;
+  border-radius: 35px;
+  text-align: center;
+  color: white;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  height: 35vh;
 }
 
-    .platforms h3 {
-      margin-bottom: 1rem;
-    }
-
-    .platform-icons {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
+.platforms h3 {
+  margin-bottom: 1rem;
 }
 
-    .platform-icons img {
-    width: 60px;
+.platform-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Wrapper for each icon + background */
+.icon-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 185px;      /* fix width same as image width */
+  height: auto;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.icon-wrapper:hover {
+  transform: scale(1.08);
+}
+
+/* Background behind icon */
+.icon-bg {
+  background-color: gainsboro;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 130px;      /* smaller than image */
+  height: 130px;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* Icon image */
+.icon-wrapper img {
+  width: 185px;
+  height: auto;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .platform-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .icon-wrapper {
+    width: 80%;          /* responsive width */
+    max-width: 250px;    /* max width */
+    margin: 0 auto;      /* center wrapper */
+  }
+
+  .icon-bg {
+    width: 80%;          /* smaller than icon */
+    max-width: 180px;
     height: auto;
-    transition: transform 0.2s ease;
+    aspect-ratio: 1;     /* keep square */
+  }
+
+  .icon-wrapper img {
+    width: 100%;         /* full width of wrapper */
+    border-radius: 20px;
+  }
 }
 
 
-    .testimonial-box {
+.testimonial-box {
       background-color: white;
       padding: 1rem;
       border-radius: 10px;
