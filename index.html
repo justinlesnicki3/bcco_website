@@ -59,39 +59,41 @@
 
     
 
-    <div class="contact_us">
-        <div class="contact_us_form">
-            <form action="submit_form.php" method="POST">
-                <div class="left_stack">
-                  <input type="text" name="name" placeholder="Full Name" required>
-                  <input type="tel" name="phone" placeholder="Phone Number" required>
-                  <input type="email" name="email" placeholder="Email Address" required>
-                </div>
-              
-                <div class="right_stack">
-                  <select name="new_customer" required>
-                    <option value="" disabled selected>Are you a new customer?</option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                  </select>
-              
-                  <select name="service" required>
-                    <option value="" disabled selected>Service Interested In</option>
-                    <option value="heating">Heating</option>
-                    <option value="cooling">Cooling</option>
-                    <option value="glass">Glass</option>
-                    <option value="cabinetry">Cabinetry</option>
-                  </select>
-              
-                  <input type="text" name="referral" placeholder="How did you hear about us?">
-                  
-                </div>
-
-                <button type="submit" class="button">Submit</button>
-
-              </form>
+<div class="contact_us">
+  <div class="contact_us_form">
+    <h2>Get In Touch With Our Specialists!</h2>
+    <form action="submit_form.php" method="POST">
+      <div class="input_stacks">
+        <div class="left_stack">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <input type="email" name="email" placeholder="Email Address" required>
         </div>
-    </div>
+
+        <div class="right_stack">
+          <select name="new_customer" required>
+            <option value="" disabled selected>Are you a new customer?</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+
+          <select name="service" required>
+            <option value="" disabled selected>Service Interested In</option>
+            <option value="heating">Heating</option>
+            <option value="cooling">Cooling</option>
+            <option value="glass">Glass</option>
+            <option value="cabinetry">Cabinetry</option>
+          </select>
+
+          <input type="text" name="referral" placeholder="How did you hear about us?">
+        </div>
+      </div>
+
+      <button type="submit" class="button">Submit</button>
+    </form>
+  </div>
+</div>
+
 
     <div class="footer-container">
         <div class="footer">

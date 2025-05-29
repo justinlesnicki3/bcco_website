@@ -311,93 +311,118 @@ nav {
 }
 
 .contact_us {
-    background: rgba(136, 159, 244, 0.51);
-    background-image: url(contact_our_specialist.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5% 2%;
+  background: linear-gradient(to bottom right, #a8bbe6, #062aae);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 2%;
+  color: white;
+  box-sizing: border-box;
 }
 
 .contact_us_form {
-    width: 100%;
-    max-width: 1200px;
-    padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.285);
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
 }
 
-.family_background {
-    opacity: 50%;
+.contact_us_form h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.contact_us_form form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-     
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input_stacks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
 .left_stack, .right_stack {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 45%;
-    max-width: 400px;
-    margin-top: 7%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
-    gap: 15px;
-    
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 300px;
+  gap: 15px;
 }
 
 input, select {
-    max-width: 350px; 
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px; 
-    font-size: 16px;
-    background: white;
-    transition: border 0.3s ease;
-    display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  color: #333;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
 }
 
 input:focus, select:focus {
-    border-color: #2A6BFF;
-    outline: none;
-}
-
-
-button:hover {
-    background-color: #1E50CC; 
-}
-
-.name, .phone, .email {
-    padding-left: 15%;
-    font-size: larger;
-    user-select: none;
-}
-
-.new_customer, .service, .referral {
-    padding-left: 15%;
-    font-size: larger;
+  border-color: #2A6BFF;
+  outline: none;
 }
 
 button {
-    border-radius: 35px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #2A6BFF;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
-    width: 40%; 
-    text-align: center;
-    margin-top: 30px;
+  width: 200px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: #2A6BFF;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: 2rem auto 0 auto;
+  display: block;
 }
+
+.input_stacks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+button:hover {
+  background-color: #1E50CC;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left_stack, .right_stack {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .contact_us_form h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
 
 .footer-container {
     background-color: #33498e;
@@ -832,7 +857,7 @@ button {
 
 .platforms {
   background-color: #1d4ed8;
-  padding: 1rem;
+  padding: 2rem 1rem; 
   border-radius: 35px;
   text-align: center;
   color: white;
@@ -840,7 +865,7 @@ button {
   width: 100%;
   max-width: 1200px;
   box-sizing: border-box;
-  height: 35vh;
+  min-height: 35vh;
 }
 
 .platforms h3 {
@@ -899,31 +924,30 @@ button {
   .platform-icons {
     flex-direction: column;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.1rem;        /* reduce vertical gap between icons */
+    margin-top: 0.5rem;  /* optional: tighter top margin */
   }
 
   .icon-wrapper {
-    width: 80%;          /* responsive width */
-    max-width: 250px;    /* max width */
-    margin: 0 auto;      /* center wrapper */
+    width: 80%;
+    max-width: 250px;
+    margin: 0.25rem auto;  /* smaller vertical margin */
   }
 
   .icon-bg {
-    width: 80%;          /* smaller than icon */
+    width: 80%;
     max-width: 180px;
-    height: auto;
-    aspect-ratio: 1;     /* keep square */
+    aspect-ratio: 1;
   }
 
   .icon-wrapper img {
-    width: 100%;         /* full width of wrapper */
-    border-radius: 20px;
+    width: 100%;
   }
 }
 
 
 .testimonial-box {
-      background-color: white;
+      background-color: #87a7ff;
       padding: 1rem;
       border-radius: 10px;
       margin-bottom: 1rem;
@@ -931,7 +955,7 @@ button {
     }
 
     .stars {
-      color: #fbbf24;
+      color: #ffea00;
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
     }
