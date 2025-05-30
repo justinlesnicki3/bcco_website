@@ -54,6 +54,7 @@ nav {
 }
 
 .nav-links a {
+    position: relative;
     display: block;
     padding: 30px 16px;
     color: #000;
@@ -62,13 +63,33 @@ nav {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 550;
     text-transform: uppercase;
-    transition: all ease-in-out 100ms;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 0%;
+    height: 3px;
+    background-color: #2469ff;
+    transition: width 0.4s ease, left 0.4s ease;
+    transform: translateX(-50%);
+    border-radius: 4px;
+}
+
+.nav-links a:hover::before {
+    width: 80%;
+}
+
+.nav-cta-button::before {
+    content: none !important;
 }
 
 .nav-links a:hover {
-    background-color: #2469ff;
-    border-radius: 175px;
-    transition: all 0.5s ease-in-out;
+    color: #2469ff;
 }
 
 .nav-links .nav-cta-button {
@@ -79,7 +100,8 @@ nav {
 }
 
 .nav-links .nav-cta-button:hover {
-    background-color: #2469ff;
+    background-color: #ffffff32;
+    content: none;
 }
 
 .hamburger {
@@ -848,7 +870,7 @@ button:hover {
       margin: auto;
     }
 
-    .section-title {
+.section-title {
       text-align: center;
       font-size: 1.5rem;
       font-weight: bold;
@@ -862,7 +884,7 @@ button:hover {
   text-align: center;
   color: white;
   margin: 2rem auto;
-  width: 100%;
+  width: 75%;
   max-width: 1200px;
   box-sizing: border-box;
   min-height: 35vh;
