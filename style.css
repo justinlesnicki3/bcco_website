@@ -180,6 +180,7 @@ nav {
     width: 40%;
     height: auto;
     mix-blend-mode: multiply;
+    border-radius: 95px;
 }
 
 .hero-text {
