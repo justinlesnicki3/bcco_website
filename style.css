@@ -177,7 +177,7 @@ nav {
 }
 
 .hero-section img {
-    width: 40%;
+    width: 35%;
     height: auto;
     mix-blend-mode: multiply;
     border-radius: 95px;
@@ -1042,3 +1042,45 @@ button:hover {
         grid-column: span 2;
       }
     }
+
+
+.neighborhoods {
+  background-color: #1d4ed8;
+  padding: 2rem 1rem; 
+  border-radius: 35px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin: 2rem auto;
+  width: 75%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  min-height: 35vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.area-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px 0;
+}
+
+.area-grid > div {
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1), background 0.25s;
+    cursor: pointer;
+}
+
+.area-grid > div:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(30, 64, 175, 0.18);
+    background: #322c82;
+}
+.area-grid > div {
+    background: #1c0ae3ba;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+}
