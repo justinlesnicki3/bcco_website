@@ -2,9 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'php/PHPMailer/PHPMailer.php';
-require 'php/PHPMailer/SMTP.php';
-require 'php/PHPMailer/Exception.php';
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/SMTP.php';
+require 'PHPMailer/Exception.php';
 
 $mail = new PHPMailer(true);
 $mail->SMTPDebug = 2; // or 3 for more detail
