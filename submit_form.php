@@ -1,4 +1,10 @@
 <?php
+
+require 'vendor/autoload.php'; // Loads dotenv & PHPMailer
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -15,15 +21,15 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';            // ✅ Gmail SMTP
     $mail->SMTPAuth = true;
-    $mail->Username = 'justinlesnicki5563@gmail.com'; // ✅ Your Gmail
-    $mail->Password = 'ogdqslnlpcsvyxyz';     // ✅ Gmail app password only
+    $mail->Username = $_ENV['SMTP_USER'];
+    $mail->Password = $_ENV['SMTP_PASS'];
     $mail->SMTPSecure = 'tls';                // ✅ TLS for port 587
     $mail->Port = 587;
 
     // Recipients
-    $mail->setFrom('justinlesnicki5563@gmail.com', 'BCCO Website'); // ✅ Gmail-safe
+    $mail->setFrom($_ENV['SMTP_USER'], 'BCCO Website');
     $mail->addReplyTo($_POST['email'], $_POST['name']);             // ✅ Customer's info
-    $mail->addAddress('justinlesnicki5563@gmail.com');              // ✅ Where you'll get it
+    $mail->addAddress($_ENV['SMTP_USER']);
 
     // Content
     $mail->isHTML(true);
