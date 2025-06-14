@@ -36,6 +36,11 @@ nav {
 .logo img {
     width: 150px;
     mix-blend-mode: multiply;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: translateY(-5px);
 }
 
 
@@ -138,6 +143,10 @@ nav {
 
     .nav-links.open {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
     }
 
     .nav-links li {
@@ -1050,5 +1059,50 @@ button:hover {
 
   .neighborhoods h3 {
     font-size: 1.25rem;
+  }
+}
+
+
+/* Contact site */
+
+/* Contact Section Styling */
+/* Contact Section Styling */
+.contact-section {
+  background-color: #f4f8ff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #2469ff;
+  color: #fff;
+  padding: 12px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button:hover {
+  background-color: #1a4ed8;
+  transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-button {
+    font-size: 16px;
+    padding: 10px 16px;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
