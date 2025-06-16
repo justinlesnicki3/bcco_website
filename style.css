@@ -159,7 +159,9 @@ nav {
     }
 
     .nav-links a:hover {
-        background-color: #39ffde;
+        background-color: #0099ff;
+        border-radius: 35px;
+
     }
 
     .nav-links .nav-cta-button {
@@ -171,7 +173,9 @@ nav {
     }
 
     .nav-links .nav-cta-button:hover {
-        background-color: #39ffde;
+        background-color: #0040ff;
+        border-radius: 35px;
+
     }
 }
 
@@ -194,6 +198,10 @@ nav {
 
 .hero-text {
     width: 60%;
+}
+
+.hero-text a {
+    text-decoration: none;
 }
 
 .hero-text h1 {
@@ -239,6 +247,11 @@ nav {
         width: 80%;
         max-width: 350px;
         height: auto;
+    }
+
+    .hero-text a {
+      display: flex;
+      justify-content: center;
     }
 
     .hero-text {
