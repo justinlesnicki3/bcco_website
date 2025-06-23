@@ -258,8 +258,8 @@ nav {
     }
 
     .hero-text a {
-      display: flex;
-      justify-content: center;
+        display: flex;
+        justify-content: center;
     }
 
     .hero-text {
@@ -279,7 +279,7 @@ nav {
     }
 
     .button-hero {
-    margin: 0 auto; 
+        margin: 0 auto; 
     }
 
 
