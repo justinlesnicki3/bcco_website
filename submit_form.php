@@ -1,38 +1,31 @@
 <?php
 
-require 'vendor/autoload.php'; // Loads dotenv & PHPMailer
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+require __DIR__ . '/vendor/autoload.php'; // loads PHPMailer + dotenv via Composer
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
 
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
-require 'PHPMailer/src/Exception.php';
-
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 $mail = new PHPMailer(true);
-$mail->SMTPDebug = 2; // or 3 for more detail
+$mail->SMTPDebug = 2; // set to 0 after testing
 $mail->Debugoutput = 'html';
 
 try {
-    // Server settings
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';            // ✅ Gmail SMTP
+    $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
     $mail->Username = $_ENV['SMTP_USER'];
     $mail->Password = $_ENV['SMTP_PASS'];
-    $mail->SMTPSecure = 'tls';                // ✅ TLS for port 587
+    $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
 
-    // Recipients
     $mail->setFrom($_ENV['SMTP_USER'], 'BCCO Website');
-    $mail->addReplyTo($_POST['email'], $_POST['name']);             // ✅ Customer's info
+    $mail->addReplyTo($_POST['email'], $_POST['name']);
     $mail->addAddress('jbasiorka@teambcco.com');
 
-    // Content
     $mail->isHTML(true);
     $mail->Subject = 'New Contact Form Submission';
     $mail->Body = "
@@ -44,7 +37,7 @@ try {
         <strong>Referral:</strong> {$_POST['referral']}<br>
     ";
 
-        $mail->send();
+    $mail->send();
     echo "Thank you! Your message has been sent.";
 } catch (Exception $e) {
     echo "Oops! Something went wrong. Mailer Error: {$mail->ErrorInfo}";
