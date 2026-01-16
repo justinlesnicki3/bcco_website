@@ -29,7 +29,7 @@ try {
     // Recipients
     $mail->setFrom($_ENV['SMTP_USER'], 'BCCO Website');
     $mail->addReplyTo($_POST['email'], $_POST['name']);             // ✅ Customer's info
-    $mail->addAddress($_ENV['SMTP_USER']);
+    $mail->addAddress('jbasiorka@teambcco.com');
 
     // Content
     $mail->isHTML(true);
