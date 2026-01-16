@@ -1,133 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to BCCO!</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <nav>
-        <a href="index.html" class="logo">
-            <img src="bcco_black.png" alt="logo" class="logo_other">
-        </a>
+      <a href="index.html" class="logo">
+        <img src="bcco_black.png" alt="logo" class="logo_other" />
+      </a>
 
-        <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="heatingservices.html">HEATING</a></li>
-            <li><a href="airconditioning.html">AIR CONDITIONING</a></li>
-            <li><a href="glassinstallation.html">GLASS</a></li>
-            <li><a href="cabinetry.html">CABINETRY</a></li>
-            <li><a href="reviews.html">REVIEWS</a></li>
-            <li><a href="areamap.html">AREA MAP</a></li>
-            <li><a class="nav-cta-button" href="contact.html">CONTACT</a></li>
-        </ul>
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="heatingservices.html">HEATING</a></li>
+        <li><a href="airconditioning.html">AIR CONDITIONING</a></li>
+        <li><a href="glassinstallation.html">GLASS</a></li>
+        <li><a href="cabinetry.html">CABINETRY</a></li>
+        <li><a href="reviews.html">REVIEWS</a></li>
+        <li><a href="areamap.html">AREA MAP</a></li>
+        <li><a class="nav-cta-button" href="contact.html">CONTACT</a></li>
+      </ul>
     </nav>
 
     <div class="hero-section">
-        <img src="bcc-collage.png" alt="">
-        <div class="hero-text">
-            <h1>Contact us for a free estimate today!</h1>
-            <p>We are a Chicagoland-based construction company specializing in high-quality air conditioning, heating, glass installation, and custom cabinetry services. Our team is committed to delivering reliable craftsmanship and exceptional results for residential and commercial projects alike.
-            </p>
-            <a href="tel:+16308225448">
-                <button class="button-hero">CALL NOW</button>
-            </a>
-        </div>
+      <img src="bcc-collage.png" alt="" />
+      <div class="hero-text">
+        <h1>Contact us for a free estimate today!</h1>
+        <p>
+          We are a Chicagoland-based construction company specializing in
+          high-quality air conditioning, heating, glass installation, and custom
+          cabinetry services. Our team is committed to delivering reliable
+          craftsmanship and exceptional results for residential and commercial
+          projects alike.
+        </p>
+        <a href="contact.html">
+          <button class="button-hero">GET IN TOUCH!</button>
+        </a>
+      </div>
     </div>
 
     <div class="about">
-        <div class="about-content">
-            <div class="left-about">
-                <h1 class="title">Who We Are</h1>
-            <div class="description-background">
-                <p class="description">
-                    BCCO is a trusted construction company serving the Chicagoland area, specializing in HVAC, glass installations, and cabinetry. We provide high-quality craftsmanship and reliable solutions for residential and commercial projects. Whether you need efficient heating and cooling, sleek glass installations, or custom cabinetry, our skilled team delivers precision and excellence in every job.
-                </p>
-            </div>
-            </div>
-            
-            <div class="more_pictures">
-                <img src="about_pictures.png" alt="about_pictures">
-            </div>
-        </div>
-    </div>
-
-    
-
-<div class="contact_us"> 
-  <div class="contact_us_form">
-    <h2>Get In Touch With Our Specialists!</h2>
-    <form action="submit_form.php" method="POST">
-      <div class="input_stacks">
-        <div class="left_stack">
-          <input type="text" name="name" placeholder="Full Name" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-          <input type="email" name="email" placeholder="Email Address" required>
+      <div class="about-content">
+        <div class="left-about">
+          <h1 class="title">Who We Are</h1>
+          <div class="description-background">
+            <p class="description">
+              BCCO is a trusted construction company serving the Chicagoland
+              area, specializing in HVAC, glass installations, and cabinetry. We
+              provide high-quality craftsmanship and reliable solutions for
+              residential and commercial projects. Whether you need efficient
+              heating and cooling, sleek glass installations, or custom
+              cabinetry, our skilled team delivers precision and excellence in
+              every job.
+            </p>
+          </div>
         </div>
 
-        <div class="right_stack">
-          <select name="new_customer" required>
-            <option value="" disabled selected>Are you a new customer?</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-
-          <select name="service" required>
-            <option value="" disabled selected>Service Interested In</option>
-            <option value="heating">Heating</option>
-            <option value="cooling">Cooling</option>
-            <option value="glass">Glass</option>
-            <option value="cabinetry">Cabinetry</option>
-          </select>
-
-          <input type="text" name="referral" placeholder="How did you hear about us?">
+        <div class="more_pictures">
+          <img src="about_pictures.png" alt="about_pictures" />
         </div>
       </div>
+    </div>
 
-      <button type="submit" class="button">Submit</button>
-    </form>
-  </div>
-</div>
+    <div class="contact_us">
+      <div class="contact_us_form">
+        <h2>Get In Touch With Our Specialists!</h2>
+        <form action="submit_form.php" method="POST">
+          <div class="input_stacks">
+            <div class="left_stack">
+              <input type="text" name="name" placeholder="Full Name" required />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
 
+            <div class="right_stack">
+              <select name="new_customer" required>
+                <option value="" disabled selected>
+                  Are you a new customer?
+                </option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+
+              <select name="service" required>
+                <option value="" disabled selected>
+                  Service Interested In
+                </option>
+                <option value="heating">Heating</option>
+                <option value="cooling">Cooling</option>
+                <option value="glass">Glass</option>
+                <option value="cabinetry">Cabinetry</option>
+              </select>
+
+              <input
+                type="text"
+                name="referral"
+                placeholder="How did you hear about us?"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="button">Submit</button>
+        </form>
+      </div>
+    </div>
 
     <div class="footer-container">
-        <div class="footer">
-            <div class="footer-heading footer-1">
-                <h2>Heating</h2>
-                <a href="heatingservices.html">Heating Repair</a>
-                <a href="heatingservices.html">Heating Installation</a>
-                <a href="heatingservices.html">Heating Maintenance</a>
-            </div>
-            <div class="footer-heading footer-2">
-                <h2>Air Conditioning</h2>
-                <a href="airconditioning.html">AC Repair</a>
-                <a href="airconditioning.html">AC Installation</a>
-                <a href="airconditioning.html">AC Maintenance</a>
-            </div>
-            <div class="footer-heading footer-3">
-                <h2>Glass Installation</h2>
-                <a href="glassinstallation.html">Shower Doors</a>
-                <a href="glassinstallation.html">Railings</a>
-                <a href="glassinstallation.html">Frameless Showers</a>
-                <a href="glassinstallation.html">Sliding Showers</a>
-            </div>
-            <div class="footer-heading footer-3">
-                <h2>Cabinetry Service</h2>
-                <a href="cabinetry.html">Custom Cabinets</a>
-                <a href="cabinetry.html">Cabinet Installation</a>
-                <a href="cabinetry.html">Shelves</a>
-            </div>
+      <div class="footer">
+        <div class="footer-heading footer-1">
+          <h2>Heating</h2>
+          <a href="heatingservices.html">Heating Repair</a>
+          <a href="heatingservices.html">Heating Installation</a>
+          <a href="heatingservices.html">Heating Maintenance</a>
         </div>
+        <div class="footer-heading footer-2">
+          <h2>Air Conditioning</h2>
+          <a href="airconditioning.html">AC Repair</a>
+          <a href="airconditioning.html">AC Installation</a>
+          <a href="airconditioning.html">AC Maintenance</a>
+        </div>
+        <div class="footer-heading footer-3">
+          <h2>Glass Installation</h2>
+          <a href="glassinstallation.html">Shower Doors</a>
+          <a href="glassinstallation.html">Railings</a>
+          <a href="glassinstallation.html">Frameless Showers</a>
+          <a href="glassinstallation.html">Sliding Showers</a>
+        </div>
+        <div class="footer-heading footer-3">
+          <h2>Cabinetry Service</h2>
+          <a href="cabinetry.html">Custom Cabinets</a>
+          <a href="cabinetry.html">Cabinet Installation</a>
+          <a href="cabinetry.html">Shelves</a>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-
-</body>
+  </body>
 </html>
