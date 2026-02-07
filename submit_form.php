@@ -31,12 +31,12 @@ $mail = new PHPMailer(true);
 try {
   // Server settings
   $mail->isSMTP();
-  $mail->Host       = 'smtp.gmail.com';
+  $mail->Host       = 'mail.bccochicago.com';
   $mail->SMTPAuth   = true;
   $mail->Username   = $_ENV['SMTP_USER'] ?? '';
   $mail->Password   = $_ENV['SMTP_PASS'] ?? '';
   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-  $mail->Port       = 587;
+  $mail->Port       = 465;
 
   // IMPORTANT: turn debug OFF in production
   $mail->SMTPDebug  = 0;
@@ -67,5 +67,5 @@ try {
   echo "Thank you! Your message has been sent.";
 } catch (Exception $e) {
   http_response_code(500);
-  echo "Oops! Something went wrong. Mailer Error: " . $mail->ErrorInfo;
+  echo "Oops! Something went wrong. Mailer Error: " . $mail->ErrorInfo . " | " . $e->getMessage();
 }
