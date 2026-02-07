@@ -1,16 +1,25 @@
 <?php
 
+
+// Show errors temporarily while testing (remove later)
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// 1) Load Composer deps (dotenv)
+require __DIR__ . '/vendor/autoload.php';
+
+// 2) Load PHPMailer manually from src/
 require __DIR__ . '/PHPMailer/src/Exception.php';
 require __DIR__ . '/PHPMailer/src/PHPMailer.php';
 require __DIR__ . '/PHPMailer/src/SMTP.php';
 
-
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+// 3) Load .env
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->safeLoad(); // won't fatal if .env missing, but your creds will be empty
+$dotenv->load();
 
 // Basic input grabbing + cleanup
 $name        = trim($_POST['name'] ?? '');
