@@ -1,5 +1,20 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+echo "PHP is running ✅<br>";
+
+$autoload = __DIR__ . '/vendor/autoload.php';
+if (!file_exists($autoload)) {
+  http_response_code(500);
+  exit("Missing: $autoload");
+}
+
+require $autoload;
+echo "Autoload found ✅";
+
 require __DIR__ . '/vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
