@@ -44,15 +44,18 @@ $mail = new PHPMailer(true);
 try {
   // Server settings
   $mail->isSMTP();
-  $mail->Host       = 'mail.bccochicago.com';
+  $mail->Host       = 'bccochicago.com';
   $mail->SMTPAuth   = true;
   $mail->Username   = $_ENV['SMTP_USER'] ?? '';
   $mail->Password   = $_ENV['SMTP_PASS'] ?? '';
-  $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+  $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
   $mail->Port       = 465;
 
-  // IMPORTANT: turn debug OFF in production
-  $mail->SMTPDebug  = 0;
+  $mail->Timeout = 15;
+  $mail->SMTPDebug = 2;
+  $mail->Debugoutput = function($str, $level) {
+      error_log("SMTP DEBUG ($level): $str");
+  };
 
   if ($mail->Username === '' || $mail->Password === '') {
     throw new Exception('Missing SMTP_USER / SMTP_PASS. Check your .env on the server.');
