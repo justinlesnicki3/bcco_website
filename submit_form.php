@@ -26,11 +26,12 @@ $name        = trim($_POST['name'] ?? '');
 $phone       = trim($_POST['phone'] ?? '');
 $email       = trim($_POST['email'] ?? '');
 $newCustomer = trim($_POST['new_customer'] ?? '');
-$service     = trim($_POST['service'] ?? '');
+$service = trim($_POST['service'] ?? 'website-contact');
+$message = trim($_POST['message'] ?? '');
 $referral    = trim($_POST['referral'] ?? '');
 
 // Minimal validation
-if ($name === '' || $phone === '' || $email === '' || $newCustomer === '' || $service === '') {
+if ($name === '' || $phone === '' || $email === '' || $newCustomer === '') {
   http_response_code(400);
   exit('Missing required fields.');
 }
