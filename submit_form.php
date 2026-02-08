@@ -46,6 +46,7 @@ try {
   $mail->isSMTP();
   $mail->Host       = 'bccochicago.com';
   $mail->SMTPAuth   = true;
+  $mail->AuthType = 'LOGIN';
   $mail->Username   = $_ENV['SMTP_USER'];
   $mail->Password   = $_ENV['SMTP_PASS'];
   $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
