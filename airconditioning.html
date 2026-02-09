@@ -60,19 +60,38 @@
         <h2>CONTACT US</h2>
 
         <form action="/submit_form.php" method="POST">
-          <input type="text" name="name" placeholder="Full Name" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <input type="tel" name="phone" placeholder="Phone" required />
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            autocomplete="name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            autocomplete="email"
+            required
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone"
+            autocomplete="tel"
+            required
+          />
 
           <select name="new_customer" required>
-            <option value="" disabled selected>Are You a New Customer?</option>
+            <option value="" disabled selected hidden>
+              Are You a New Customer?
+            </option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
           </select>
 
           <textarea name="message" placeholder="Message" required></textarea>
 
-          <!-- Hidden fields so your PHP doesn't choke -->
           <input type="hidden" name="service" value="website-contact" />
           <input type="hidden" name="referral" value="contact-box-form" />
 
