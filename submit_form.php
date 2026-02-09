@@ -42,6 +42,10 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 $mail = new PHPMailer(true);
 
+$esc = function ($v) {
+  return htmlspecialchars($v, ENT_QUOTES, 'UTF-8');
+};
+
 try {
   // Server settings
   $mail->isSMTP();
