@@ -63,6 +63,10 @@ try {
     throw new Exception('Missing SMTP_USER / SMTP_PASS. Check your .env on the server.');
   }
 
+  if ($message !== '') {
+  $body .= "<strong>Message:</strong><br>" . $esc($message) . "<br>";
+}
+
   // Recipients
   $mail->setFrom($mail->Username, 'BCCO Website');
   $mail->addAddress($mail->Username);
