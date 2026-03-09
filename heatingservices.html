@@ -1,19 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to BCCO!</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <nav>
-        <a href="index.html" class="logo">
-            <img src="bcco_black.png" alt="logo" class="logo_other">
-        </a>
+      <a href="index.html" class="logo">
+        <img src="bcco_black.png" alt="logo" class="logo_other" />
+      </a>
 
         <div class="hamburger">
             <div class="bar"></div>
@@ -27,116 +28,174 @@
             <li><a href="areamap.html">AREA MAP</a></li>
             <li><a class="nav-cta-button" href="contact.html">CONTACT</a></li>
         </ul>
+
     </nav>
 
     <div>
-        <div class="image-with-text">
-            <img src="family_friendly.png" alt="family_friendly" class="family_friendly">
-            <p class="image-label">HEATING SERVICES</p>
-        </div> 
+      <div class="image-with-text">
+        <img
+          src="family_friendly.png"
+          alt="family_friendly"
+          class="family_friendly"
+        />
+        <p class="image-label">HEATING SERVICES</p>
+      </div>
     </div>
 
     <div class="heating-contact-section">
-        <div class="heating-hero">
-            <h1>Dependable Heating Contractor You Can Trust</h1>
-            <p class="heating-description">
-                At BCCO, we are dedicated to keeping homes and businesses across the Chicagoland area warm and comfortable. We specialize in heating repair, maintenance, and installation, providing reliable and efficient solutions to ensure your heating system runs smoothly year-round. With expert technicians and a commitment to quality service, we’re here to keep you warm no matter how cold it gets. Contact us today for all your heating needs!
-            </p>
-        </div>
+      <div class="heating-hero">
+        <h1>Dependable Heating Contractor You Can Trust</h1>
+        <p class="heating-description">
+          At BCCO, we are dedicated to keeping homes and businesses across the
+          Chicagoland area warm and comfortable. We specialize in heating
+          repair, maintenance, and installation, providing reliable and
+          efficient solutions to ensure your heating system runs smoothly
+          year-round. With expert technicians and a commitment to quality
+          service, we’re here to keep you warm no matter how cold it gets.
+          Contact us today for all your heating needs!
+        </p>
+      </div>
 
-        <div class="contact-box">
-            <h2>CONTACT US</h2>
-            <form>
-              <input type="text" placeholder="Full Name" required>
-              <input type="email" placeholder="Email" required>
-              <input type="tel" placeholder="Phone" required>
-              <select required>
-                <option value="" disabled selected>Are You a New Customer?</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-              <textarea placeholder="Message" required></textarea>
-              <button type="submit">SUBMIT</button>
-            </form>
-        </div>
-    </div>
+      <div class="contact-box">
+        <h2>CONTACT US</h2>
 
-    <div class="reviews_container">
-        <div class="family-reviews-wrapper">
-            <img src="family-reviews.png" alt="" class="family-reviews-img">
-            <img src="5_stars.png" alt="" class="five_stars">
-            <p class="review_description">"The man who set my appointment was very pleasant to work with. I  received reminders and notifications about the appointment. My technician was friendly and knowledgeable. The service was expedient and thorough."</p>
-        </div>
-    </div>
-    
+        <form action="/submit_form.php" method="POST">
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            autocomplete="name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            autocomplete="email"
+            required
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone"
+            autocomplete="tel"
+            required
+          />
 
-<div class="contact_us">
-  <div class="contact_us_form">
-    <h2>Get In Touch With Our Specialists!</h2>
-    <form action="submit_form.php" method="POST">
-      <div class="input_stacks">
-        <div class="left_stack">
-          <input type="text" name="name" placeholder="Full Name" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-          <input type="email" name="email" placeholder="Email Address" required>
-        </div>
-
-        <div class="right_stack">
           <select name="new_customer" required>
-            <option value="" disabled selected>Are you a new customer?</option>
+            <option value="" disabled selected hidden>
+              Are You a New Customer?
+            </option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
           </select>
 
-          <select name="service" required>
-            <option value="" disabled selected>Service Interested In</option>
-            <option value="heating">Heating</option>
-            <option value="cooling">Cooling</option>
-            <option value="glass">Glass</option>
-            <option value="cabinetry">Cabinetry</option>
-          </select>
+          <textarea name="message" placeholder="Message" required></textarea>
 
-          <input type="text" name="referral" placeholder="How did you hear about us?">
-        </div>
+          <input type="hidden" name="service" value="website-contact" />
+          <input type="hidden" name="referral" value="contact-box-form" />
+
+          <button type="submit">SUBMIT</button>
+        </form>
       </div>
+    </div>
 
-      <button type="submit" class="button">Submit</button>
-    </form>
-  </div>
-</div>
+    <div class="reviews_container">
+      <div class="family-reviews-wrapper">
+        <img src="family-reviews.png" alt="" class="family-reviews-img" />
+        <img src="5_stars.png" alt="" class="five_stars" />
+        <p class="review_description">
+          "The man who set my appointment was very pleasant to work with. I
+          received reminders and notifications about the appointment. My
+          technician was friendly and knowledgeable. The service was expedient
+          and thorough."
+        </p>
+      </div>
+    </div>
+
+    <div class="contact_us">
+      <div class="contact_us_form">
+        <h2>Get In Touch With Our Specialists!</h2>
+        <form action="submit_form.php" method="POST">
+          <div class="input_stacks">
+            <div class="left_stack">
+              <input type="text" name="name" placeholder="Full Name" required />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+
+            <div class="right_stack">
+              <select name="new_customer" required>
+                <option value="" disabled selected>
+                  Are you a new customer?
+                </option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+
+              <select name="service" required>
+                <option value="" disabled selected>
+                  Service Interested In
+                </option>
+                <option value="heating">Heating</option>
+                <option value="cooling">Cooling</option>
+                <option value="glass">Glass</option>
+                <option value="cabinetry">Cabinetry</option>
+              </select>
+
+              <input
+                type="text"
+                name="referral"
+                placeholder="How did you hear about us?"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="button">Submit</button>
+        </form>
+      </div>
+    </div>
 
     <div class="footer-container">
-        <div class="footer">
-            <div class="footer-heading footer-1">
-                <h2>Heating</h2>
-                <a href="heatingservices.html">Heating Repair</a>
-                <a href="heatingservices.html">Heating Installation</a>
-                <a href="heatingservices.html">Heating Maintenance</a>
-            </div>
-            <div class="footer-heading footer-2">
-                <h2>Air Conditioning</h2>
-                <a href="airconditioning.html">AC Repair</a>
-                <a href="airconditioning.html">AC Installation</a>
-                <a href="airconditioning.html">AC Maintenance</a>
-            </div>
-            <div class="footer-heading footer-3">
-                <h2>Glass Installation</h2>
-                <a href="glassinstallation.html">Shower Doors</a>
-                <a href="glassinstallation.html">Railings</a>
-                <a href="glassinstallation.html">Frameless Showers</a>
-                <a href="glassinstallation.html">Sliding Showers</a>
-            </div>
-            <div class="footer-heading footer-3">
-                <h2>Cabinetry Service</h2>
-                <a href="cabinetry.html">Custom Cabinets</a>
-                <a href="cabinetry.html">Cabinet Installation</a>
-                <a href="cabinetry.html">Shelves</a>
-            </div>
+      <div class="footer">
+        <div class="footer-heading footer-1">
+          <h2>Heating</h2>
+          <a href="heatingservices.html">Heating Repair</a>
+          <a href="heatingservices.html">Heating Installation</a>
+          <a href="heatingservices.html">Heating Maintenance</a>
         </div>
+        <div class="footer-heading footer-2">
+          <h2>Air Conditioning</h2>
+          <a href="airconditioning.html">AC Repair</a>
+          <a href="airconditioning.html">AC Installation</a>
+          <a href="airconditioning.html">AC Maintenance</a>
+        </div>
+        <div class="footer-heading footer-3">
+          <h2>Glass Installation</h2>
+          <a href="glassinstallation.html">Shower Doors</a>
+          <a href="glassinstallation.html">Railings</a>
+          <a href="glassinstallation.html">Frameless Showers</a>
+          <a href="glassinstallation.html">Sliding Showers</a>
+        </div>
+        <div class="footer-heading footer-3">
+          <h2>Cabinetry Service</h2>
+          <a href="cabinetry.html">Custom Cabinets</a>
+          <a href="cabinetry.html">Cabinet Installation</a>
+          <a href="cabinetry.html">Shelves</a>
+        </div>
+      </div>
     </div>
-    
 
     <script src="script.js"></script>
-    
-</body>
+  </body>
 </html>
